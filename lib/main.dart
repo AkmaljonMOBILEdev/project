@@ -1,3 +1,6 @@
+import 'package:e_commerce/ui/examples/one.dart';
+import 'package:e_commerce/ui/home_screen/home_screen.dart';
+import 'package:e_commerce/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,7 +19,13 @@ class MyApp extends StatelessWidget {
         minTextAdapt: true,
         splitScreenMode: true,
         builder: (BuildContext context, Widget? child){
-          return const MaterialApp();
+          return  MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: AppTheme.lightTheme,
+            darkTheme: AppTheme.darkTheme,
+            themeMode: ThemeMode.dark,
+            home: HomeScreen(),
+          );
         });
   }
 }

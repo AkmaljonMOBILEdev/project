@@ -116,11 +116,11 @@ class AppTheme{
   );
 
   static ThemeData darkTheme=ThemeData(
-      scaffoldBackgroundColor: AppColors.black,
+      scaffoldBackgroundColor: AppColors.c111015,
       appBarTheme: const AppBarTheme(
-          backgroundColor: AppColors.black,
+          backgroundColor: AppColors.c111015,
           systemOverlayStyle: SystemUiOverlayStyle(
-              statusBarColor: AppColors.black,
+              statusBarColor: AppColors.c111015,
               statusBarBrightness: Brightness.light,
               statusBarIconBrightness: Brightness.light
           )
@@ -131,38 +131,38 @@ class AppTheme{
               color: AppColors.white,
               fontSize: 57.sp,
               fontWeight: FontWeight.w800,
-              fontFamily: 'SF Pro Text'
+              fontFamily: 'Inter'
           ),
           displayMedium: TextStyle(
               color: AppColors.white,
               fontSize: 45.sp,
               fontWeight: FontWeight.w700,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           ),
           displaySmall: TextStyle(
               color: AppColors.white,
               fontSize: 36.sp,
               fontWeight: FontWeight.w600,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           ),
           //headline
           headlineLarge: TextStyle(
               color: AppColors.white,
               fontSize: 32.sp,
               fontWeight: FontWeight.w700,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           ),
           headlineMedium: TextStyle(
               color: AppColors.white,
               fontSize: 28.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           ),
           headlineSmall: TextStyle(
               color: AppColors.white,
               fontSize: 24.sp,
               fontWeight: FontWeight.w400,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
 
           ),
           //title
@@ -170,57 +170,57 @@ class AppTheme{
               color: AppColors.white,
               fontSize: 22.sp,
               fontWeight: FontWeight.w700,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           ),
           titleMedium: TextStyle(
               color: AppColors.white,
               fontSize: 16.sp,
               fontWeight: FontWeight.w600,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           ),
           titleSmall: TextStyle(
               color: AppColors.white,
               fontSize: 14.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           ),
           //label
           labelLarge: TextStyle(
               color: AppColors.white,
               fontSize: 14.sp,
               fontWeight: FontWeight.w600,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           ),
           labelMedium: TextStyle(
               color: AppColors.white,
               fontSize: 12.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           ),
           labelSmall: TextStyle(
               color: AppColors.white,
               fontSize: 11.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           ),
           //body
           bodyLarge: TextStyle(
               color: AppColors.white,
               fontSize: 16.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           ),
           bodyMedium: TextStyle(
               color: AppColors.white,
               fontSize: 14.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           ),
           bodySmall: TextStyle(
               color: AppColors.white,
               fontSize: 12.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'Inter'
           )
 
       )

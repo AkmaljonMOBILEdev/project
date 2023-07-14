@@ -34,7 +34,7 @@ flutter:
     - assets/svg/
 
   fonts:
-    - family: Poppins
+    - family: Inter
       fonts:
-        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Inter-Regular.ttf
           style: italic
