@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
       isLoading = true;
     });
     mainWeatherModel =
-    await WeatherRepository().getWeatherByQuery(query: "Fergana");
+    await WeatherRepository().getWeatherByQuery(query: "Arizona");
     setState(() {
       isLoading = false;
     });
@@ -102,8 +102,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            BottomListView(),
-            SizedBox(height: 20.h,)
+            // BottomListView(),
+            // SizedBox(height: 20.h,)
           ],
         ),
     ));

@@ -1,6 +1,12 @@
+import 'package:e_commerce/data/models/one_call/weather_model_by_one_call.dart';
+import 'package:e_commerce/data/models/universal_response.dart';
+import 'package:e_commerce/data/network/providers/rep.dart';
 import 'package:e_commerce/utils/images.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../../../data/network/providers/apiprovider.dart';
 
 class BottomListView extends StatefulWidget {
   const BottomListView({super.key});
@@ -32,8 +38,31 @@ class _BottomListViewState extends State<BottomListView> {
     ...List.generate(6, (index) => AppImages.rainy),
   ];
   List<String> degrees = [
-    ...List.generate(24, (index) => '${(index-10) + 1}')
+    ...List.generate(24, (index) => '$index')
   ];
+  bool isLoading = false;
+  WeatherModelByOneCall? weather;
+  UniversalResponse universalResponse = UniversalResponse();
+  _fetchDailyData()async{
+    setState(() {
+      isLoading=true;
+    });
+    weather = await Repo().fetchWe();
+    print('weather: $weather');
+    setState(() {
+      isLoading=false;
+    });
+  }
+  String getHour(int datetime) {
+    var date = DateTime.fromMillisecondsSinceEpoch(datetime);
+    return DateFormat('HH:mm').format(date).split(':')[0];
+  }
+  @override
+  void initState() {
+    _fetchDailyData();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -53,6 +82,16 @@ class _BottomListViewState extends State<BottomListView> {
                 borderRadius: BorderRadius.circular(8.r),
                 color: const Color(0xFFFCE4EC)
               ),
+              child: Column(
+                children: [
+                  Text(hours[index]),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10.r),
+                    child: Image.asset(icons[index], width: 80,height: 40,),
+                  ),
+                  Text('38')
+                ],
+              )
             );
           },
 
