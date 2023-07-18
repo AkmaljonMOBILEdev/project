@@ -9,16 +9,16 @@ class ApiProvider {
   Future<UniversalResponse> getWeatherByOneCall({
          required double lat, required double lon
       })async{
-    Uri uri = Uri.https(baseUrlForHttps,
-        "/data/2.5/onecall",
-      {
-        "appid": apiKeyForMain,
-        "lat": lat.toString(),
-        "lon": lon.toString(),
-        "exclude": "minutely,current",
-        "units": "metric",
-      },
-    );
+      Uri uri = Uri.https(baseUrlForHttps,
+          "/data/2.5/onecall",
+        {
+          "appid": apiKeyForMain,
+          "lat": lat.toString(),
+          "lon": lon.toString(),
+          "exclude": "minutely,current",
+          "units": "metric",
+        },
+      );
     try{
       Response response =  await get(uri);
       if(response.statusCode==200){

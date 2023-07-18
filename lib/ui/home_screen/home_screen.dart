@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
       isLoading = true;
     });
     mainWeatherModel =
-    await WeatherRepository().getWeatherByQuery(query: "Arizona");
+    await WeatherRepository().getWeatherByQuery(query: "Tashkent");
     setState(() {
       isLoading = false;
     });

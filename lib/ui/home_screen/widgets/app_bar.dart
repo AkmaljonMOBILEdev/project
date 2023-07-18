@@ -23,7 +23,9 @@ class HomeAppBar extends StatelessWidget implements PreferredSize {
         ),
       ),
       leading: IconButton(
-        onPressed: (){},
+        onPressed: (){
+
+        },
         icon: SvgPicture.asset(AppIcons.search),
       ),
       actions: [

@@ -22,7 +22,7 @@ class _GetDegreeState extends State<GetDegree> {
         SizedBox(
             width: 160.w,
             height: 160.h,
-            child: Image.asset(AppImages.cludy)),
+            child: Image.asset(AppImages.sunny)),
         SizedBox(width: 4.w,),
         Column(
           mainAxisAlignment: MainAxisAlignment.start,
