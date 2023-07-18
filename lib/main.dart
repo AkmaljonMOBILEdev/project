@@ -1,8 +1,12 @@
+import 'package:e_commerce/data/local/storage_repository.dart';
 import 'package:e_commerce/ui/home_screen/home_screen.dart';
+import 'package:e_commerce/utils/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main(){
+Future<void> main()async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await StorageRepository.getInstance();
   runApp(const MyApp());
 }
 
@@ -19,8 +23,11 @@ class MyApp extends StatelessWidget {
         builder: (BuildContext context, Widget? child){
           return  MaterialApp(
             debugShowCheckedModeBanner: false,
-            home: HomeScreen(),
-                      );
+            theme: AppTheme.lightTheme,
+            darkTheme: AppTheme.darkTheme,
+            themeMode: ThemeMode.light,
+            home: const HomeScreen(),
+          );
         });
   }
 }

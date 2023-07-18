@@ -1,7 +1,8 @@
-class UniversalResponse{
+class UniversalData{
   dynamic data;
   String error;
+  int statusCode;
 
-  UniversalResponse({this.data, this.error=""});
+  UniversalData({this.data, this.error="", this.statusCode=0});
 
 }

@@ -16,100 +16,101 @@ class AppTheme{
           )
       ),
       textTheme:  TextTheme(
-        //display
+          //display
           displayLarge: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 57.sp,
               fontWeight: FontWeight.w800,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           displayMedium: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 45.sp,
               fontWeight: FontWeight.w700,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           displaySmall: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 36.sp,
               fontWeight: FontWeight.w600,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           //headline
           headlineLarge: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 32.sp,
               fontWeight: FontWeight.w700,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           headlineMedium: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 28.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           headlineSmall: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 24.sp,
               fontWeight: FontWeight.w400,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
+
           ),
           //title
           titleLarge: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 22.sp,
               fontWeight: FontWeight.w700,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           titleMedium: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 16.sp,
               fontWeight: FontWeight.w600,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           titleSmall: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 14.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           //label
           labelLarge: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 14.sp,
               fontWeight: FontWeight.w600,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           labelMedium: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 12.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           labelSmall: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 11.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           //body
           bodyLarge: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 16.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           bodyMedium: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 14.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           bodySmall: TextStyle(
-              color: AppColors.black,
+              color: AppColors.white,
               fontSize: 12.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           )
 
       )
@@ -131,38 +132,38 @@ class AppTheme{
               color: AppColors.white,
               fontSize: 57.sp,
               fontWeight: FontWeight.w800,
-              fontFamily: 'SF Pro Text'
+              fontFamily: 'SansPro'
           ),
           displayMedium: TextStyle(
               color: AppColors.white,
               fontSize: 45.sp,
               fontWeight: FontWeight.w700,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           displaySmall: TextStyle(
               color: AppColors.white,
               fontSize: 36.sp,
               fontWeight: FontWeight.w600,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           //headline
           headlineLarge: TextStyle(
               color: AppColors.white,
               fontSize: 32.sp,
               fontWeight: FontWeight.w700,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           headlineMedium: TextStyle(
               color: AppColors.white,
               fontSize: 28.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           headlineSmall: TextStyle(
               color: AppColors.white,
               fontSize: 24.sp,
               fontWeight: FontWeight.w400,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
 
           ),
           //title
@@ -170,57 +171,57 @@ class AppTheme{
               color: AppColors.white,
               fontSize: 22.sp,
               fontWeight: FontWeight.w700,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           titleMedium: TextStyle(
               color: AppColors.white,
               fontSize: 16.sp,
               fontWeight: FontWeight.w600,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           titleSmall: TextStyle(
               color: AppColors.white,
               fontSize: 14.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           //label
           labelLarge: TextStyle(
               color: AppColors.white,
               fontSize: 14.sp,
               fontWeight: FontWeight.w600,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           labelMedium: TextStyle(
               color: AppColors.white,
               fontSize: 12.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           labelSmall: TextStyle(
               color: AppColors.white,
               fontSize: 11.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           //body
           bodyLarge: TextStyle(
               color: AppColors.white,
               fontSize: 16.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           bodyMedium: TextStyle(
               color: AppColors.white,
               fontSize: 14.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           ),
           bodySmall: TextStyle(
               color: AppColors.white,
               fontSize: 12.sp,
               fontWeight: FontWeight.w500,
-              fontFamily: 'Poppins'
+              fontFamily: 'SansPro'
           )
 
       )
