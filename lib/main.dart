@@ -1,8 +1,7 @@
-import 'package:e_commerce/ui/home_screen/home_screen.dart';
+import 'package:e_commerce/utils/app_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-void main(){
+void main() {
   runApp(const MyApp());
 }
 
@@ -11,16 +10,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
-    return ScreenUtilInit(
-        designSize:  Size(screenSize.width, screenSize.height),
-        minTextAdapt: true,
-        splitScreenMode: true,
-        builder: (BuildContext context, Widget? child){
-          return  MaterialApp(
-            debugShowCheckedModeBanner: false,
-            home: HomeScreen(),
-                      );
-        });
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      // home: Example6(),
+      initialRoute: RouteNames.homeScreen,
+      onGenerateRoute: AppRoutes.generateRoute,
+    );
   }
 }
