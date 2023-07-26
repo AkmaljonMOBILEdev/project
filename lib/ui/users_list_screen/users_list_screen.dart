@@ -12,26 +12,26 @@ class UsersListScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Users"),
       ),
-      body: ListView.builder(
-        physics: const BouncingScrollPhysics(),
-        itemBuilder: (BuildContext context, int index){
-        return Consumer<UserProvider>(builder: (context, userProvider, child){
-            switch(userProvider.status){
-              case FormStatus.pure:
-                return const Text("No data yet",style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: Colors.purpleAccent),);
-              case FormStatus.loading:
-                return const Center(child: CircularProgressIndicator(),);
-              case FormStatus.success:
-                return ListTile(
-                  title: Text(userProvider.users[index].title),
-                  subtitle: Text(userProvider.users[index].userId.toString()),
-                );
-              case FormStatus.failure:
-                return Text(userProvider.errorText);
+      body: Consumer<UserProvider>(builder: (context, userProvider, child){
+        switch(userProvider.status){
+          case FormStatus.pure:
+            return const Text("No data yet",style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: Colors.purpleAccent),);
+          case FormStatus.loading:
+            return const Center(child: CircularProgressIndicator(),);
+          case FormStatus.success:
+            return ListView.builder(
+                physics: const BouncingScrollPhysics(),
+                itemBuilder: (BuildContext context, int index){
+              return ListTile(
+                title: Text(userProvider.users[index].title),
+                subtitle: Text(userProvider.users[index].userId.toString()),
+              );
+            });
+          case FormStatus.failure:
+            return Text(userProvider.errorText);
 
-            }
-        });
-      },),
+        }
+      }),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           UserProvider userProvider = Provider.of<UserProvider>(context, listen: false);
