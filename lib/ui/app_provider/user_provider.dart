@@ -5,6 +5,9 @@ import 'package:flutter/cupertino.dart';
 import '../../data/models/user_model/user_model.dart';
 
 class UserProvider with ChangeNotifier{
+  UserProvider(){
+    fetAllUsers();
+  }
   List<UserModel> users = [];
   FormStatus status = FormStatus.pure;
   String errorText = "";

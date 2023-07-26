@@ -12,11 +12,13 @@ class UsersListScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Users"),
       ),
-      body: ListView.builder(itemBuilder: (BuildContext context, int index){
+      body: ListView.builder(
+        physics: const BouncingScrollPhysics(),
+        itemBuilder: (BuildContext context, int index){
         return Consumer<UserProvider>(builder: (context, userProvider, child){
             switch(userProvider.status){
               case FormStatus.pure:
-                return const Text("No data yet",style: TextStyle(fontSize: 36, fontWeight: FontWeight.w700, color: Colors.purpleAccent),);
+                return const Text("No data yet",style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700, color: Colors.purpleAccent),);
               case FormStatus.loading:
                 return const Center(child: CircularProgressIndicator(),);
               case FormStatus.success:
@@ -32,9 +34,11 @@ class UsersListScreen extends StatelessWidget {
       },),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          UserProvider userProvider = Provider.of<UserProvider>(context);
+          UserProvider userProvider = Provider.of<UserProvider>(context, listen: false);
           userProvider.fetAllUsers();
+          print("Status: ${userProvider.status}");
         },
+        backgroundColor: Colors.purpleAccent,
         child: Icon(Icons.download),
       ),
     );

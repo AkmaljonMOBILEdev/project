@@ -7,13 +7,13 @@ import 'package:http/http.dart';
 
 class ApiProvider{
   Future<UniversalData> getAllUsers()async{
-    Uri uri = Uri.https("jsonplaceholder.typicode.com/albums");
+    Uri uri = Uri.parse("https://jsonplaceholder.typicode.com/albums");
     try{
       Response response = await get(uri);
       if(response.statusCode==200){
         return UniversalData(
-          data: (jsonDecode(response.body)as List<UserModel>?)
-              ?.map((e) => UserModel.fromJson(e as Map<String, dynamic>)).toList() ?? []
+          data: (jsonDecode(response.body)as List<dynamic>?)
+              ?.map((e) => UserModel.fromJson(e)).toList() ?? []
         );
       }
       return handleHttpErrors(response);
