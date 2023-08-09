@@ -1,4 +1,6 @@
+import 'package:e_commerce/data/db/data_base.dart';
 import 'package:e_commerce/data/global_fields.dart';
+import 'package:e_commerce/data/models/news_model.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,15 +15,16 @@ Future<void> initFirebase() async {
 
   // FOREGROUND MESSAGE HANDLING.
   FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+    LocalNotificationService.instance.showFlutterNotification(message);
     debugPrint(
         "NOTIFICATION FOREGROUND MODE: ${message.data["imageUrl"]} va ${message.notification!.title} in foreground");
     title = message.data["title"];
     desc = message.data["description"];
     imageUrl = message.data["imageUrl"];
-    time = DateTime.now().toString();
     source = message.data["source"];
 
-    LocalNotificationService.instance.showFlutterNotification(message);
+    LocalDatabase.insertContact(NewsModel(title: title, desc: desc, imageUrl: imageUrl, source: source));
+
 
   });
 
