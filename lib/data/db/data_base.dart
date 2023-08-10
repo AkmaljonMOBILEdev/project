@@ -33,7 +33,6 @@ class LocalDatabase {
   Future _createDB(Database db, int version) async {
     const idType = "INTEGER PRIMARY KEY AUTOINCREMENT";
     const textType = "TEXT NOT NULL";
-    const intType = "INTEGER DEFAULT 0";
 
     await db.execute('''
     CREATE TABLE ${NewsFields.newsTable} (
@@ -48,7 +47,7 @@ class LocalDatabase {
     debugPrint("-------DB----------CREATED---------");
   }
 
-  static Future<NewsModel> insertContact(
+  static Future<NewsModel> insertNews(
       NewsModel newsModel) async {
     debugPrint("Asserting: ${newsModel.title}");
     final db = await getInstance.database;

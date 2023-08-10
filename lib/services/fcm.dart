@@ -11,7 +11,7 @@ Future<void> initFirebase() async {
   await Firebase.initializeApp();
   String? fcmToken = await FirebaseMessaging.instance.getToken();
   debugPrint("FCM USER TOKEN: $fcmToken");
-  await FirebaseMessaging.instance.subscribeToTopic("news");
+  // await FirebaseMessaging.instance.subscribeToTopic("news");
 
   // FOREGROUND MESSAGE HANDLING.
   FirebaseMessaging.onMessage.listen((RemoteMessage message) {
@@ -23,8 +23,8 @@ Future<void> initFirebase() async {
     imageUrl = message.data["imageUrl"];
     source = message.data["source"];
 
-    LocalDatabase.insertContact(NewsModel(title: title, desc: desc, imageUrl: imageUrl, source: source));
-
+    LocalDatabase.insertNews(NewsModel(title: title, desc: desc, imageUrl: imageUrl, source: source));
+    // context.read<NewsProvider>().readNews();
 
   });
 
@@ -43,6 +43,8 @@ Future<void> initFirebase() async {
 
   if (remoteMessage != null) {
     handleMessage(remoteMessage);
+    LocalDatabase.insertNews(NewsModel.fromJson(remoteMessage.data));
+    // if(context.mounted) context.read<NewsProvider>().readNews();
   }
 
   FirebaseMessaging.onMessageOpenedApp.listen(handleMessage);
@@ -50,7 +52,7 @@ Future<void> initFirebase() async {
 
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
-
+  LocalDatabase.insertNews(NewsModel.fromJson(message.data));
   debugPrint(
       "NOTIFICATION BACKGROUND MODE: ${message.data["news_image"]} va ${message.notification!.title} in background");
 }
