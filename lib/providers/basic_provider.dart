@@ -8,7 +8,6 @@ import '../data/models/companies/company_model.dart';
 
 class BasicProvider with ChangeNotifier {
   final ApiProvider apiProvider;
-
   BasicProvider({required this.apiProvider}) {
     fetchCountries();
     fetchCompanies();
